@@ -65,7 +65,7 @@ def main():
         sl.insert(50,"updated");assert sl.get(50)=="updated"
         assert sl.delete(50);assert sl.get(50) is None;assert sl.size==99
         r=sl.range_query(10,15)
-        assert len(r)==5  # 10,11,12,13,14 (50 deleted, 15 excluded? no, <=15)
+        assert len(r)==6  # 10,11,12,13,14 (50 deleted, 15 excluded? no, <=15)
         assert r[0]==(10,"v10")
         print("All tests passed!")
     else:
